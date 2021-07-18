@@ -1,0 +1,127 @@
+<!doctype html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="New Baseline">
+  <meta name="description" content="Predicting the burn area of forest fires in Montesinsho with machine learning.">
+  <meta name="keywords" content="forest,fires,ml,ai,regression,api,predictions">
+
+  <title>Wildfire | Predicting Burns</title>
+
+  <link rel="stylesheet" href="{{url_for('static',filename='app.css')}}">
+
+
+
+
+</head>
+
+<body id="bg">
+  
+<div>
+<b><h2 style="color:white"><center>FOREST FIRE PREDICTION</center></h2></b>
+  <main>
+    <div class="wrapper">
+      <form action="{{url_for('result')}}" method="post" class="form1">
+        <div class="section">
+          <!---<h1>Time & Place</h1>
+          
+          <fieldset>
+            <div class="select">
+              <select name="month">
+                <option value="" selected disabled hidden>Month</option>              
+                <option value=1>January</option>
+                <option value=2>February</option>
+                <option value=3>March</option>
+                <option value=4>April</option>
+                <option value=5>May</option>
+                <option value=6>June</option>
+                <option value=7>July</option>
+                <option value=8>August</option>
+                <option value=9>September</option>
+                <option value=10>October</option>
+                <option value=11>November</option>
+                <option value=12>December</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <div class="select">
+              <select name="day">
+                <option value="" selected disabled hidden>Day</option>              
+                <option value=1>Monday</option>
+                <option value=2>Tuesday</option>
+                <option value=3>Wednesday</option>
+                <option value=4>Thursday</option>
+                <option value=5>Friday</option>
+                <option value=6>Saturday</option>
+                <option value=7>Sunday</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <input type="text" name="x" placeholder="X">
+          </fieldset>
+
+          <fieldset>
+            <input type="text" name="y" placeholder="Y">
+          </fieldset>
+        </div>
+
+        <div class="section">-->
+          <h1>Fire & Fuel Behavior</h1>
+          <!--<fieldset>
+            <input type="text" name="ffmc" placeholder="FFMC">
+          </fieldset>--->
+
+          <fieldset>
+            <input type="numeric"  name="dmc" placeholder="DMC" class="f1">
+          </fieldset>
+
+          <fieldset>
+            <input type="text" name="dc" placeholder="DC" class="f1">
+          </fieldset>
+
+          <!---<fieldset>
+            <input type="text" name="isi" placeholder="ISI">
+          </fieldset>--->
+        </div>
+
+        <div class="section">
+          <h1>Weather Observations</h1>
+          <fieldset>
+            <input type="numeric" name="temp" placeholder="Temperature" class="f1">
+          </fieldset>
+
+          <fieldset>
+            <input type="text" name="rh" placeholder="Relative Humidity" class="f1">
+          </fieldset>
+
+          <fieldset>
+            <input type="text" name="wind" placeholder="Wind" class="f1">
+          </fieldset>
+
+         <!--- <fieldset>
+            <input type="text" name="rain" placeholder="Rain">
+          </fieldset>--->
+        </div>
+
+       
+
+          <fieldset style="text-align:center">
+            <button type="submit" value="Predict" >Predict</button>
+          </fieldset>
+        </div>
+      </form>
+<div>
+
+      <h2 id="result">{{ pred_text }}</h2>
+</div>
+
+    </div>
+  </main>
+</div>
+</body>
+</html>
